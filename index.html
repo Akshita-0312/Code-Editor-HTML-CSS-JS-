@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Editor</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="heading">Online Code Editor</div>
+      <div class="save">
+        <input type="button" value="View Saved Files" id="view-saved-files">
+        <i class="ri-close-line" id="close-saved-files" style="display:none; font-size: 24px; margin-left: 10px; cursor: pointer;"></i>
+        <div id="saved-files-list" style="display: none;"></div>
+      </div>
+    </div>
+
+    <div class="code-editor">
+      <div class="html-code text">
+        <div class="info">
+          <p class="file-name html-file-name"></p>
+          <div class="icons">
+            <i class="ri-save-line html-save-icon"></i>
+            <i class="ri-file-add-line html-create-new"></i>
+            <i class="ri-file-upload-line html-upload"></i>
+            <i class="ri-file-download-line html-download"></i>
+          </div>
+        </div>
+        <textarea class="code" id="html-code"></textarea>
+      </div>
+
+      <div class="css-code text">
+        <div class="info">
+          <p class="file-name css-file-name"></p>
+          <div class="icons">
+            <i class="ri-save-line css-save-icon"></i>
+            <i class="ri-file-add-line css-create-new"></i>
+            <i class="ri-file-upload-line css-upload"></i>
+            <i class="ri-file-download-line css-download"></i>
+          </div>
+        </div>
+        <textarea class="code" id="css-code"></textarea>
+      </div>
+
+      <div class="js-code text">
+        <div class="info">
+          <p class="file-name js-file-name"></p>
+          <div class="icons">
+            <i class="ri-save-line js-save-icon"></i>
+            <i class="ri-file-add-line js-create-new"></i>
+            <i class="ri-file-upload-line js-upload"></i>
+            <i class="ri-file-download-line js-download"></i>
+          </div>
+        </div>
+        <textarea class="code" id="js-code"></textarea>
+      </div>
+    </div>
+
+    <div class="btns">
+      <input type="button" value="Run" id="run">
+      <input type="button" value="Clear All" id="clear-all">
+    </div>
+
+    <div class="output">
+      <div class="outputHeading">Output</div>
+    </div>
+  </div>
+
+  <form class="save-file">
+    <label for="fileName">Enter File name</label><br><br>
+    <input type="text" class="fileName" id="fileName" placeholder="Enter File Name"><br><br>
+    <input type="button" class="confirm-file" value="Confirm File Name">
+  </form>
+
+  <input type="file" id="html-upload-input" accept=".html" style="display: none;">
+  <input type="file" id="css-upload-input" accept=".css" style="display: none;">
+  <input type="file" id="js-upload-input" accept=".js" style="display: none;">
+
+  <script src="script.js"></script>
+</body>
+</html>
